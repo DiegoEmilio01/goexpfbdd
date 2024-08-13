@@ -31,3 +31,6 @@ cmd/experiment/inputs/*
 !cmd/experiment/inputs/.include
 !cmd/experiment/inputs/mnist_d0_n400.json
 !cmd/experiment/inputs/mnist_d0_input.txt
+
+# Vscode configuration
+*.vscode
