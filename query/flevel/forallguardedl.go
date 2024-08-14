@@ -35,7 +35,7 @@ func newInstanceIter(dim int) (*[]query.FeatV, instanceIter, error) {
 	t := make([]query.FeatV, dim)
 	iter.t = &t
 	iter.fd = dim
-	iter.cp = -1
+	iter.cp = 0
 	iter.jump = true
 
 	return &t, iter, nil
@@ -44,20 +44,19 @@ func newInstanceIter(dim int) (*[]query.FeatV, instanceIter, error) {
 // Next attempts to moves the iterator to the next instance, updating the value of
 // t. Returns true if there is a next instance and false otherwise.
 func (i *instanceIter) Next() bool {
-
 	if i.cp < i.fd {
 
 		if i.jump {
-			if i.cp >= 0 {
-				(*i.t)[i.cp] = query.BOT
+			if i.cp >= 1 {
+				(*i.t)[i.cp-1] = query.BOT
 			}
-			i.cp += 1
 			(*i.t)[i.cp] = query.ZERO
 			i.jump = false
 			return true
 		}
 
 		(*i.t)[i.cp] = query.ONE
+		i.cp += 1
 		i.jump = true
 		return true
 	}
