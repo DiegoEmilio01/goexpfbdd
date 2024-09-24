@@ -1,4 +1,4 @@
-package cons
+package suf
 
 import (
 	"errors"
@@ -31,7 +31,7 @@ func (c ConstVar) Encoding(ctx query.QContext) (cnf.CNF, error) {
 
 	for i, ft := range sc.Val {
 		if ft == query.BOT {
-			clauses = append(clauses, cnf.Clause{ctx.CNFVar(sv, i, query.BOT)})
+			clauses = append(clauses, cnf.Clause{ctx.CNFVar(sv, i, int(query.BOT))})
 		}
 	}
 
