@@ -12,7 +12,7 @@ import (
 	"github.com/jtcaraball/goexpdt/query"
 )
 
-const solverPath string = "/kissat"
+const solverPath string = "./kissat"
 
 type Encodable interface {
 	Encoding(ctx query.QContext) (cnf.CNF, error)
