@@ -62,6 +62,20 @@ var LupPTT = []test.BTRecord{
 		Val2:    []query.FeatV{query.BOT, query.ZERO, query.BOT},
 		ExpCode: 10,
 	},
+	{
+		Dim:     3,
+		Name:    "(_,_,_), (_,_,_)",
+		Val1:    []query.FeatV{query.BOT, query.BOT, query.BOT},
+		Val2:    []query.FeatV{query.BOT, query.BOT, query.BOT},
+		ExpCode: 20,
+	},
+	{
+		Dim:     3,
+		Name:    "(1,1,1), (1,1,1)",
+		Val1:    []query.FeatV{query.ONE, query.ONE, query.ONE},
+		Val2:    []query.FeatV{query.ONE, query.ONE, query.ONE},
+		ExpCode: 20,
+	},
 }
 
 var LupNTT = []test.BTRecord{
@@ -120,5 +134,19 @@ var LupNTT = []test.BTRecord{
 		Val1:    []query.FeatV{query.BOT, query.BOT, query.BOT},
 		Val2:    []query.FeatV{query.BOT, query.ZERO, query.BOT},
 		ExpCode: 20,
+	},
+	{
+		Dim:     3,
+		Name:    "(_,_,_), (_,_,_)",
+		Val1:    []query.FeatV{query.BOT, query.BOT, query.BOT},
+		Val2:    []query.FeatV{query.BOT, query.BOT, query.BOT},
+		ExpCode: 10,
+	},
+	{
+		Dim:     3,
+		Name:    "(1,1,1), (1,1,1)",
+		Val1:    []query.FeatV{query.ONE, query.ONE, query.ONE},
+		Val2:    []query.FeatV{query.ONE, query.ONE, query.ONE},
+		ExpCode: 10,
 	},
 }

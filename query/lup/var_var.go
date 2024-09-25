@@ -41,7 +41,7 @@ func (l VarVar) Encoding(ctx query.QContext) (cnf.CNF, error) {
 	ncnf = ncnf.AppendSemantics(cl)
 
 	var i int
-	for i = 1; i < ctx.Dim(); i++ {
+	for i = 1; i < ctx.Dim()+1; i++ {
 		cl := cnf.Clause{
 			-ctx.CNFVar(svCount1, ctx.Dim()-1, i),
 			ctx.CNFVar(svCount2, ctx.Dim()-1, i-1),
