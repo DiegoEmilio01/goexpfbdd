@@ -7,7 +7,7 @@ import (
 	"github.com/jtcaraball/goexpdt/query"
 )
 
-// VarVar is the variable-variable version of the Consistent extension.
+// VarVar is the variable-variable version of the SUF formula.
 type VarVar struct {
 	I1 query.QVar
 	I2 query.QVar

@@ -7,7 +7,7 @@ import (
 	"github.com/jtcaraball/goexpdt/query"
 )
 
-// VarConst is the variable-constant version of the Consistent extension.
+// VarConst is the variable-constant version of the SUF formula.
 type VarConst struct {
 	I1 query.QVar
 	I2 query.QConst
